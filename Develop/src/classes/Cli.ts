@@ -257,16 +257,33 @@ class Cli {
         },
       ])
       .then((answers) => {
-        // TODO: Use the answers object to pass the required properties to the Motorbike constructor
-        // TODO: push the motorbike to the vehicles array
-        // TODO: set the selectedVehicleVin to the vin of the motorbike
-        // TODO: perform actions on the motorbike
+        const motorbike = new Motorbike(
+          // TODO: The generateVin method is static and should be called using the class name Cli, make sure to use Cli.generateVin() for creating a truck and motorbike as well! ✅
+          Cli.generateVin(),
+          answers.color,
+          answers.make,
+          answers.model,
+          parseInt(answers.year),
+          parseInt(answers.weight),
+          parseInt(answers.topSpeed),
+          []
+        );
+        //push the motorbike to the vehicles array
+        this.vehicles.push(motorbike);
+        // set the selectedVehicleVin to the vin of the motorbike
+        this.selectedVehicleVin = motorbike.vin;
+        // perform actions on the motorbike
+        this.performActions();
+        // TODO: Use the answers object to pass the required properties to the Motorbike constructor ✅
+        // TODO: push the motorbike to the vehicles array ✅
+        // TODO: set the selectedVehicleVin to the vin of the motorbike ✅
+        // TODO: perform actions on the motorbike ✅
       });
   }
 
   // method to find a vehicle to tow
-  // TODO: add a parameter to accept a truck object
-  findVehicleToTow(): void {
+  // TODO: add a parameter to accept a truck object ✅
+  findVehicleToTow(truck: Truck): void {
     inquirer
       .prompt([
         {
@@ -282,9 +299,16 @@ class Cli {
         },
       ])
       .then((answers) => {
-        // TODO: check if the selected vehicle is the truck
-        // TODO: if it is, log that the truck cannot tow itself then perform actions on the truck to allow the user to select another action
-        // TODO: if it is not, tow the selected vehicle then perform actions on the truck to allow the user to select another action
+        if (answers.vehicleToTow === truck) {
+          console.log("The truck cannot tow itself!");
+          this.performActions();
+        } else {
+          console.log(`${answers.vehicleToTow} got towed.`)
+          this.performActions();
+        }
+        // TODO: check if the selected vehicle is the truck ✅
+        // TODO: if it is, log that the truck cannot tow itself then perform actions on the truck to allow the user to select another action ✅
+        // TODO: if it is not, tow the selected vehicle then perform actions on the truck to allow the user to select another action ✅
       });
   }
 
