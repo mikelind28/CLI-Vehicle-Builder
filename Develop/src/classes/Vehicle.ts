@@ -1,16 +1,19 @@
 // import Driveable interface
 import Driveable from '../interfaces/Driveable.js';
+export type vehicleType = "vehicle" | "truck" | "motorbike" | "car";
 
 // Vehicle class that implements Driveable interface
 class Vehicle implements Driveable {
   // Declare properties of the Vehicle class
   started: boolean;
   currentSpeed: number;
+  vehicle: vehicleType;
 
   // Constructor for the Vehicle class
   constructor() {
     this.started = false;
     this.currentSpeed = 0;
+    this.vehicle = 'vehicle';
   }
 
   // Method to print vehicle details
