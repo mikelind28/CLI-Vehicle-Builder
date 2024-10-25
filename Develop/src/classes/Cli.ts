@@ -266,9 +266,9 @@ class Cli {
           parseInt(answers.year),
           parseInt(answers.weight),
           parseInt(answers.topSpeed),
-          []
+          [new Wheel(answers.frontWheelDiameter, answers.frontWheelBrand), new Wheel(answers.rearWheelDiameter, answers.rearWheelBrand)]
         );
-        //push the motorbike to the vehicles array
+        // push the motorbike to the vehicles array
         this.vehicles.push(motorbike);
         // set the selectedVehicleVin to the vin of the motorbike
         this.selectedVehicleVin = motorbike.vin;
@@ -402,7 +402,7 @@ class Cli {
                 this.findVehicleToTow(this.vehicles[i] as Truck);
                 return;
               } else {
-                console.log("This vehicle cannot tow another vehicle.")
+                console.log("Only trucks can tow other vehicles.")
               }
             }
           }
@@ -411,11 +411,15 @@ class Cli {
         else if (answers.action === 'Do a wheelie') {
           for (let i = 0; i < this.vehicles.length; i++) {
             if (this.vehicles[i].vin === this.selectedVehicleVin) {
-              console.log(`TODO: How to determine if selected vehicle is a motorbike?`)
+              if (this.vehicles[i].vehicle === "motorbike") {
+                (this.vehicles[i] as Motorbike).wheelie();
+              } else {
+                console.log("Only motorbikes can do wheelies.");
+              }
             }
           }
         }
-        // TODO: add statements to perform the wheelie action only if the selected vehicle is a motorbike
+        // TODO: add statements to perform the wheelie action only if the selected vehicle is a motorbike  ✅
         else if (answers.action === 'Select or create another vehicle') {
           // start the cli to return to the initial prompt if the user wants to select or create another vehicle
           this.startCli();
