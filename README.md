@@ -6,21 +6,21 @@
 
 Vehicle-Builder is a simple command-line application that allows users to pick from a list of vehicles, create new vehicles, and perform actions on those vehicles. Users are intuitively guided through a series of prompts and the chosen actions are displayed in the terminal. 
 
-This application was a TypeScript-based exercise in implementing interfaces, extending classes, and importing and exporting modules. 
+This application is a TypeScript-based exercise in implementing interfaces, extending classes, and importing and exporting modules. 
 
 ## Installation
 
-Download the project to your local environment by running the following commands in the terminal:
+1. Download the project to your local environment by running the following commands in the terminal:
 
 ```
 git clone https://github.com/mikelind28/Vehicle-Builder.git
 ```
-Then, make sure to change directories into the Develop folder:
+2. Then, make sure to change directories into the Develop folder:
 
 ```
 cd Vehicle-Builder/Develop
 ```
-Finally, install the required dependencies:
+3. Finally, install the required dependencies:
 
 ```
 npm install
@@ -37,7 +37,7 @@ See a video walkthrough of the application [here]( *add link!* )!
 
 ## Credits
 
-Thanks to edX Boot Camps LLC for providing the starter code and assignment prompt, and thanks to teacher's assistant Matteo Ramazzini for showing me [TypeScript's type assertion](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#type-assertions) feature, helped me ensure that only certain types of vehicles could perform certain actions!
+Thanks to edX Boot Camps LLC for providing the starter code and assignment prompt, and thanks to our teacher's assistant Matteo Ramazzini for showing me [TypeScript's type assertion](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#type-assertions) feature, which helped me ensure that only certain types of vehicles could perform certain actions!
 
 ## License
 
