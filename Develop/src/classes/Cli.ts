@@ -1,5 +1,6 @@
 // importing classes from other files
 import inquirer from "inquirer";
+import colors from "colors";
 import Truck from "./Truck.js";
 import Car from "./Car.js";
 import Motorbike from "./Motorbike.js";
@@ -300,7 +301,7 @@ class Cli {
       ])
       .then((answers) => {
         if (answers.vehicleToTow === truck) {
-          console.log("The truck cannot tow itself!");
+          console.log(colors.black.bgWhite("The truck cannot tow itself!"));
           this.performActions();
         } else {
           truck.tow(answers.vehicleToTow);
@@ -403,10 +404,10 @@ class Cli {
                   this.findVehicleToTow(this.vehicles[i] as Truck);
                   return;
                 } else {
-                  console.log("You need to start the truck first.");
+                  console.log(colors.black.bgWhite("You need to start the truck first."));
                 }
               } else {
-                console.log("Only trucks can tow other vehicles.");
+                console.log(colors.black.bgWhite("Only trucks can tow other vehicles."));
               }
             }
           }
@@ -419,10 +420,10 @@ class Cli {
                 if (this.vehicles[i].started === true) {
                   (this.vehicles[i] as Motorbike).wheelie();
                 } else {
-                  console.log("You need to start the motorbike first.")
+                  console.log(colors.black.bgWhite("You need to start the motorbike first."))
                 }
               } else {
-                console.log("Only motorbikes can do wheelies.");
+                console.log(colors.black.bgWhite("Only motorbikes can do wheelies."));
               }
             }
           }

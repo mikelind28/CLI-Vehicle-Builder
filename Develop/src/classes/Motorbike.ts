@@ -1,6 +1,7 @@
 // Importing Vehicle and Wheel classes
 import Vehicle from './Vehicle.js';
 import Wheel from './Wheel.js';
+import colors from "colors";
 
 // TODO: The Motorbike class should extend the Vehicle class
 class Motorbike extends Vehicle {
@@ -59,7 +60,7 @@ class Motorbike extends Vehicle {
   // TODO: Implement the wheelie method ✅
     // TODO: The method should log the message "Motorbike [make] [model] is doing a wheelie!" ✅
   wheelie(): void {
-    console.log(`Motorbike ${this.make} ${this.model} is doing a wheelie!`)
+    console.log(colors.black.bgWhite(`Motorbike ${this.make} ${this.model} is doing a wheelie!`))
   }
 
   // Override the printDetails method from the Vehicle class
@@ -68,20 +69,20 @@ class Motorbike extends Vehicle {
     super.printDetails();
 
     // Print details of the Motorbike class
-    console.log(`VIN: ${this.vin}`);
-    console.log(`Color: ${this.color}`);
-    console.log(`Make: ${this.make}`);
-    console.log(`Model: ${this.model}`);
-    console.log(`Year: ${this.year}`);
-    console.log(`Weight: ${this.weight} lbs`);
-    console.log(`Top Speed: ${this.topSpeed} mph`);
+    console.log(colors.black.bgWhite(`VIN: ${this.vin}`));
+    console.log(colors.black.bgWhite(`Color: ${this.color}`));
+    console.log(colors.black.bgWhite(`Make: ${this.make}`));
+    console.log(colors.black.bgWhite(`Model: ${this.model}`));
+    console.log(colors.black.bgWhite(`Year: ${this.year}`));
+    console.log(colors.black.bgWhite(`Weight: ${this.weight} lbs`));
+    console.log(colors.black.bgWhite(`Top Speed: ${this.topSpeed} mph`));
 
     // Print details of the wheels
     console.log(
-      `Wheel 1: ${this.wheels[0].getDiameter} inch with a ${this.wheels[0].getTireBrand} tire`
+      colors.black.bgWhite(`Wheel 1: ${this.wheels[0].getDiameter} inch with a ${this.wheels[0].getTireBrand} tire`)
     );
     console.log(
-      `Wheel 2: ${this.wheels[1].getDiameter} inch with a ${this.wheels[1].getTireBrand} tire`
+      colors.black.bgWhite(`Wheel 2: ${this.wheels[1].getDiameter} inch with a ${this.wheels[1].getTireBrand} tire`)
     );
   }
   // TODO: Override the printDetails method from the Vehicle class ✅

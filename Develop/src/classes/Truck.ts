@@ -4,6 +4,7 @@ import Motorbike from './Motorbike.js';
 import Car from './Car.js';
 import Wheel from './Wheel.js';
 import AbleToTow from '../interfaces/AbleToTow.js';
+import colors from "colors";
 
 // TODO: The Truck class should extend the Vehicle class and should implement the AbleToTow interface
 class Truck extends Vehicle implements AbleToTow {
@@ -62,9 +63,9 @@ class Truck extends Vehicle implements AbleToTow {
   tow(vehicle: Truck | Motorbike | Car): void {
     if (vehicle.make && vehicle.model) {
       if (vehicle.weight <= this.towingCapacity) {
-        console.log(`The ${vehicle.make} ${vehicle.model} is being towed.`);
+        console.log(colors.black.bgWhite(`The ${vehicle.make} ${vehicle.model} is being towed.`));
       } else {
-        console.log(`The ${vehicle.make} ${vehicle.model} is too heavy to be towed.`);
+        console.log(colors.black.bgWhite(`The ${vehicle.make} ${vehicle.model} is too heavy to be towed.`));
       }
     }
     // TODO: Get the make and model of the vehicle if it exists ✅
@@ -78,27 +79,27 @@ class Truck extends Vehicle implements AbleToTow {
     super.printDetails();
 
     // Print details of the Truck class
-    console.log(`VIN: ${this.vin}`);
-    console.log(`Color: ${this.color}`);
-    console.log(`Make: ${this.make}`);
-    console.log(`Model: ${this.model}`);
-    console.log(`Year: ${this.year}`);
-    console.log(`Weight: ${this.weight} lbs`);
-    console.log(`Top Speed: ${this.topSpeed} mph`);
-    console.log(`Towing Capacity: ${this.towingCapacity} lbs`);
+    console.log(colors.black.bgWhite(`VIN: ${this.vin}`));
+    console.log(colors.black.bgWhite(`Color: ${this.color}`));
+    console.log(colors.black.bgWhite(`Make: ${this.make}`));
+    console.log(colors.black.bgWhite(`Model: ${this.model}`));
+    console.log(colors.black.bgWhite(`Year: ${this.year}`));
+    console.log(colors.black.bgWhite(`Weight: ${this.weight} lbs`));
+    console.log(colors.black.bgWhite(`Top Speed: ${this.topSpeed} mph`));
+    console.log(colors.black.bgWhite(`Towing Capacity: ${this.towingCapacity} lbs`));
 
     // Print details of the wheels
     console.log(
-      `Wheel 1: ${this.wheels[0].getDiameter} inch with a ${this.wheels[0].getTireBrand} tire`
+      colors.black.bgWhite(`Wheel 1: ${this.wheels[0].getDiameter} inch with a ${this.wheels[0].getTireBrand} tire`)
     );
     console.log(
-      `Wheel 2: ${this.wheels[1].getDiameter} inch with a ${this.wheels[1].getTireBrand} tire`
+      colors.black.bgWhite(`Wheel 2: ${this.wheels[1].getDiameter} inch with a ${this.wheels[1].getTireBrand} tire`)
     );
     console.log(
-      `Wheel 3: ${this.wheels[2].getDiameter} inch with a ${this.wheels[2].getTireBrand} tire`
+      colors.black.bgWhite(`Wheel 3: ${this.wheels[2].getDiameter} inch with a ${this.wheels[2].getTireBrand} tire`)
     );
     console.log(
-      `Wheel 4: ${this.wheels[3].getDiameter} inch with a ${this.wheels[3].getTireBrand} tire`
+      colors.black.bgWhite(`Wheel 4: ${this.wheels[3].getDiameter} inch with a ${this.wheels[3].getTireBrand} tire`)
     );
   }
   // TODO: Override the printDetails method from the Vehicle class ✅
