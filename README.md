@@ -8,13 +8,6 @@ Vehicle-Builder is a simple command-line application that allows users to pick f
 
 This application was a TypeScript-based exercise in implementing interfaces, extending classes, and importing and exporting modules. 
 
-## Table of Contents (Optional)
-
-- [Installation](#installation)
-- [Usage](#usage)
-- [Credits](#credits)
-- [License](#license)
-
 ## Installation
 
 Download the project to your local environment by running the following commands in the terminal:
