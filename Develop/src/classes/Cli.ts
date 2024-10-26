@@ -399,10 +399,14 @@ class Cli {
           for (let i = 0; i < this.vehicles.length; i++) {
             if (this.vehicles[i].vin === this.selectedVehicleVin) {
               if (this.vehicles[i].vehicle === "truck") {
-                this.findVehicleToTow(this.vehicles[i] as Truck);
-                return;
+                if (this.vehicles[i].started === true) {
+                  this.findVehicleToTow(this.vehicles[i] as Truck);
+                  return;
+                } else {
+                  console.log("You need to start the truck first.");
+                }
               } else {
-                console.log("Only trucks can tow other vehicles.")
+                console.log("Only trucks can tow other vehicles.");
               }
             }
           }
@@ -412,7 +416,11 @@ class Cli {
           for (let i = 0; i < this.vehicles.length; i++) {
             if (this.vehicles[i].vin === this.selectedVehicleVin) {
               if (this.vehicles[i].vehicle === "motorbike") {
-                (this.vehicles[i] as Motorbike).wheelie();
+                if (this.vehicles[i].started === true) {
+                  (this.vehicles[i] as Motorbike).wheelie();
+                } else {
+                  console.log("You need to start the motorbike first.")
+                }
               } else {
                 console.log("Only motorbikes can do wheelies.");
               }
