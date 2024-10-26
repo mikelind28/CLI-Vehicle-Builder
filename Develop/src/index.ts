@@ -8,7 +8,6 @@ import Cli from "./classes/Cli.js";
 // create an array of vehicles
 const vehicles = [];
 
-// TODO: uncomment once trucks are implemented ✅
 const truck1 = new Truck(
   Cli.generateVin(),
   "red", 
@@ -32,7 +31,6 @@ const car1 = new Car(
   []
 );
 
-// TODO: uncomment once motorbikes are implemented
 const motorbike1Wheels = [new Wheel(17, "Michelin"), new Wheel(17, "Michelin")];
 const motorbike1 = new Motorbike(
   Cli.generateVin(), 
@@ -46,10 +44,8 @@ const motorbike1 = new Motorbike(
 );
 
 // push vehicles to array
-// TODO: uncomment once trucks are implemented ✅
 vehicles.push(truck1);
 vehicles.push(car1);
-// TODO: uncomment once motorbikes are implemented ✅
 vehicles.push(motorbike1);
 
 // create a new instance of the Cli class
