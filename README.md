@@ -33,7 +33,7 @@ After [installing](#installation) the application, simply run ```npm start``` fr
 
 Newly-created vehicles can store information such as the make, model, year, top speed, and more. Vehicle actions include starting and stopping, accelerating and decelerating, turning, and reversing. Certain actions are limited by the vehicle's type and its current state—for example, only certain vehicles are allowed to tow or do wheelies, and vehicles can only move after having been started. Try to tow a vehicle that is heavier than the truck's tow capacity and see what happens!
 
-See a video walkthrough of the application [here]( *add link!* )!
+See a video walkthrough of the application [here](https://drive.google.com/file/d/13WOD0GomK0IZek2z0PmVfFD3Ou4KQqwj/view?usp=sharing).
 
 ## Credits
 
