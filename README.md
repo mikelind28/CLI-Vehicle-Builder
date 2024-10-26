@@ -1,22 +1,14 @@
 # Vehicle-Builder
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 ## Description
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
-
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
-
----
 Vehicle-Builder is a simple command-line application that allows users to pick from a list of vehicles, create new vehicles, and perform actions on those vehicles. Users are intuitively guided through a series of prompts and the chosen actions are displayed in the terminal. 
 
 This application was a TypeScript-based exercise in implementing interfaces, extending classes, and importing and exporting modules. 
 
 ## Table of Contents (Optional)
-
-If your README is long, add a table of contents to make it easy for users to find what they need.
 
 - [Installation](#installation)
 - [Usage](#usage)
@@ -25,55 +17,36 @@ If your README is long, add a table of contents to make it easy for users to fin
 
 ## Installation
 
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+Download the project to your local environment by running the following commands in the terminal:
 
----
+```
+git clone https://github.com/mikelind28/Vehicle-Builder.git
+```
+Then, make sure to change directories into the Develop folder:
 
+```
+cd Vehicle-Builder/Develop
+```
+Finally, install the required dependencies:
+
+```
+npm install
+```
+You're now ready to use Vehicle-Builder!
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
+After [installing](#installation) the application, simply run ```npm start``` from the terminal from within the Develop folder. Then, follow the prompts using your keyboard's arrow keys and the return key. 
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
+Newly-created vehicles can store information such as the make, model, year, top speed, and more. Vehicle actions include starting and stopping, accelerating and decelerating, turning, and reversing. Certain actions are limited by the vehicle's type and its current state—for example, only certain vehicles are allowed to tow or do wheelies, and vehicles can only move after having been started. Try to tow a vehicle that is heavier than the truck's tow capacity and see what happens!
 
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
----
-
-
-Newly-created vehicles can store information such as the make, model, year, top speed, and more. Vehicle actions include starting and stopping, accelerating and decelerating, turning, and reversing. Certain actions are limited by the vehicle's type and its current state—only certain vehicles are allowed to tow or do wheelies, and for example, and vehicles can only move after being started. 
+See a video walkthrough of the application [here]( *add link!* )!
 
 ## Credits
 
-List your collaborators, if any, with links to their GitHub profiles.
-
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
-
-If you followed tutorials, include links to those here as well.
+Thanks to edX Boot Camps LLC for providing the starter code and assignment prompt, and thanks to teacher's assistant Matteo Ramazzini for showing me [TypeScript's type assertion](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#type-assertions) feature, helped me ensure that only certain types of vehicles could perform certain actions!
 
 ## License
 
-The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
+This project uses an [MIT License ↗️](./LICENSE).
 
----
-
-🏆 The previous sections are the bare minimum, and your project will ultimately determine the content of this document. You might also want to consider adding the following sections.
-
-## Badges
-
-![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)
-
-Badges aren't necessary, per se, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
-
-## Features
-
-If your project has a lot of features, list them here.
-
-## How to Contribute
-
-If you created an application or package and would like other developers to contribute it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer.
-
-## Tests
-
-Go the extra mile and write tests for your application. Then provide examples on how to run them here.
